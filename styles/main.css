@@ -1,0 +1,10 @@
+body {
+    background-image: url('../images/dog-bg.jpg');
+}
+
+.letterbox {
+    margin: 3rem;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: gray 0rem 0rem 2rem;
+}
