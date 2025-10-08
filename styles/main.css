@@ -8,3 +8,7 @@ body {
     background-color: white;
     box-shadow: gray 0rem 0rem 2rem;
 }
+
+#now-playing {
+    z-index: 1;
+}
