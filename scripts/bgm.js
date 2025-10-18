@@ -28,8 +28,8 @@ window.addEventListener('load', () => {
 
 
     addEventsListener(['mousedown', 'touchend'], () => {
-        player.style.opacity = 1;
-        player.style.scale = 1;
+        player.style.opacity = '';
+        player.style.scale = '';
         bgm.play();
     });
 }, { once: true });
