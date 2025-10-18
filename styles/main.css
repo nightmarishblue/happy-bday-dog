@@ -10,7 +10,10 @@ body {
 }
 
 #now-playing {
+    position: fixed;
     z-index: 1;
+    top: 1em;
+    right: 1em;
 }
 
 /* scale images down if they're too big */

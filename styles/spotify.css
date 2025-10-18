@@ -1,9 +1,6 @@
 .spotify {
   display: inline-flex;
   align-items: center;
-  position: fixed;
-  top: 1em;
-  right: 1em;
   background-color: #121212; /* spotify bg color */
   transition: opacity 500ms, scale 500ms;
   height: 80px;
