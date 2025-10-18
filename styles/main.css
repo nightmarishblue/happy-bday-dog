@@ -12,3 +12,8 @@ body {
 #now-playing {
     z-index: 1;
 }
+
+/* scale images down if they're too big */
+img {
+    max-width: 100%;
+}
