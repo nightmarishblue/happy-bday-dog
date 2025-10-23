@@ -1,0 +1,19 @@
+body {
+    background-image: url(C:\Users\Shane\Downloads\communism);
+}
+
+.letterbox {
+    margin: 3vmax;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: gray 0rem 0rem 2rem;
+}
+
+#now-playing {
+    z-index: 1;
+}
+
+/* scale images down if they're too big */
+img {
+    max-width: 100%;
+}
