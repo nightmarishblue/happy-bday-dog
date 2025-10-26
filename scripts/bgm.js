@@ -17,10 +17,8 @@ function addEventsListener(events, listener) {
 
 window.addEventListener('load', () => {
     // load the bgm file
-    const bgm = document.createElement('audio');
-    bgm.src = BGM_FILE;
-    bgm.load();
-    bgm.loop = true;
+    /** @type {HTMLAudioElement} */
+    const bgm = document.getElementById('spotify-audio');
     // hide the player
     const player = document.getElementById('now-playing');
     player.style.opacity = 0;
