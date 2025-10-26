@@ -4,7 +4,7 @@ const NUM_FILES = 4;
 /** @type {HTMLVideoElement} */
 const player = document.getElementById("el-comandante");
 /** @type {HTMLAudioElement} */
-const spotify = document.getElementById('spotify-audio');
+const bgm = document.getElementById('bgm');
 const queue = [...Array(NUM_FILES).keys()];
 shuffle(queue);
 
@@ -20,16 +20,16 @@ function loadNext() {
     player.load();
 }
 
-let musicWasPlaying = !spotify.paused;
+let musicWasPlaying = !bgm.paused;
 function playVideo() {
-    musicWasPlaying = !spotify.paused;
-    if (musicWasPlaying) spotify.pause();
+    musicWasPlaying = !bgm.paused;
+    if (musicWasPlaying) bgm.pause();
     player.play();
 }
 
 function pauseVideo() {
     player.pause();
-    if (musicWasPlaying) spotify.play();
+    if (musicWasPlaying) bgm.play();
 }
 
 loadNext();

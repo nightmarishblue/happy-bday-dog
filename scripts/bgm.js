@@ -3,6 +3,10 @@
 */
 const BGM_FILE = "./music/ram-ranch.opus";
 
+/** @type {HTMLAudioElement} */
+const bgm = document.getElementById('bgm');
+const player = document.getElementById('now-playing');
+
 function addEventsListener(events, listener) {
     const func = (event) => {
         listener(event);
@@ -15,19 +19,19 @@ function addEventsListener(events, listener) {
     }
 }
 
-window.addEventListener('load', () => {
-    // load the bgm file
-    /** @type {HTMLAudioElement} */
-    const bgm = document.getElementById('spotify-audio');
-    // hide the player
-    const player = document.getElementById('now-playing');
+// show the player and start the music
+function playMusic() {
+    player.style.opacity = '';
+    player.style.scale = '';
+    bgm.play();
+}
+
+// hide and pause
+function pauseMusic() {
     player.style.opacity = 0;
     player.style.scale = 0;
+    bgm.pause();
+}
 
-
-    addEventsListener(['mousedown', 'touchend'], () => {
-        player.style.opacity = '';
-        player.style.scale = '';
-        bgm.play();
-    });
-}, { once: true });
+pauseMusic();
+addEventsListener(['mousedown', 'touchend'], playMusic);
