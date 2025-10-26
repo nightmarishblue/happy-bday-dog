@@ -14,12 +14,22 @@ function shuffle(a, _b, _c, _d) { // hacky; only pass a
     _c = a.length; while (_c) _b = Math.random() * (--_c + 1) | 0, _d = a[_c], a[_c] = a[_b], a[_b] = _d
 }
 
+function path(n) {
+    return `./video/che/${queue[n] + 1}.webm`;
+}
 
 let next = 0;
+const preloaded = document.createElement('video');
+function preload() {
+    const file = path(next);
+    preloaded.src = file;
+    preloaded.load();
+}
+
 function loadNext() {
-    player.src = `./video/che/${queue[next] + 1}.webm`;
+    player.src = preloaded.src;
     next = (next + 1) % NUM_FILES;
-    player.load();
+    preload();
 }
 
 let musicWasPlaying = !bgm.paused;
@@ -34,6 +44,7 @@ function pauseVideo() {
     if (musicWasPlaying) playMusic();
 }
 
+preload();
 loadNext();
 
 player.addEventListener('ended', () => {
