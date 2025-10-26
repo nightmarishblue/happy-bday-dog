@@ -17,6 +17,6 @@ body {
 }
 
 /* scale images down if they're too big */
-img {
+img, video {
     max-width: 100%;
 }
