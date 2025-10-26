@@ -2,8 +2,8 @@
     loads and plays the background music for the web page
 */
 /** @type {HTMLAudioElement} */
-const bgm = document.getElementById('bgm');
-const player = document.getElementById('now-playing');
+const BGM = document.getElementById('bgm');
+const PLAYER = document.getElementById('now-playing');
 
 function addEventsListener(events, listener) {
     const func = (event) => {
@@ -18,23 +18,35 @@ function addEventsListener(events, listener) {
 }
 
 function showMusic() {
-    player.style.opacity = '';
-    player.style.scale = '';
+    PLAYER.style.opacity = '';
+    PLAYER.style.scale = '';
 }
 
 function hideMusic() {
-    player.style.opacity = 0;
-    player.style.scale = 0;
+    PLAYER.style.opacity = 0;
+    PLAYER.style.scale = 0;
 }
 
-// show the player and start the music
+const BARS = document.querySelectorAll('.spotify .bar');
+const ANIMATION = BARS[0].style.animation;
 function playMusic() {
-    bgm.play();
+    for (const bar of BARS) {
+        bar.style.animation = ANIMATION;
+    }
+    BGM.play();
 }
 
 // hide and pause
 function pauseMusic() {
-    bgm.pause();
+    for (const bar of BARS) {
+        // this affront to god extracts the current element height during the animation and forces a reflow 
+        const currentHeight = bar.getBoundingClientRect().height;
+        bar.style.animation = 'none';
+        bar.style.height = `${currentHeight}px`;
+        bar.offsetHeight;
+        bar.style.height = '0';
+    }
+    BGM.pause();
 }
 
 hideMusic();
