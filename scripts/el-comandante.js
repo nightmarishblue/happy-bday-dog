@@ -4,18 +4,18 @@ import { pauseMusic, playMusic } from "./bgm.js";
 const NUM_FILES = 4;
 
 /** @type {HTMLVideoElement} */
-const player = document.getElementById("el-comandante");
+const PLAYER = document.getElementById("el-comandante");
 /** @type {HTMLAudioElement} */
-const bgm = document.getElementById('bgm');
-const queue = [...Array(NUM_FILES).keys()];
-shuffle(queue);
+const BGM = document.getElementById('bgm');
+const QUEUE = [...Array(NUM_FILES).keys()];
+shuffle(QUEUE);
 
 function shuffle(a, _b, _c, _d) { // hacky; only pass a
     _c = a.length; while (_c) _b = Math.random() * (--_c + 1) | 0, _d = a[_c], a[_c] = a[_b], a[_b] = _d
 }
 
 function path(n) {
-    return `./video/che/${queue[n] + 1}.webm`;
+    return `./video/che/${QUEUE[n] + 1}.webm`;
 }
 
 let next = 0;
@@ -27,32 +27,32 @@ function preload() {
 }
 
 function loadNext() {
-    player.src = preloaded.src;
+    PLAYER.src = preloaded.src;
     next = (next + 1) % NUM_FILES;
     preload();
 }
 
-let musicWasPlaying = !bgm.paused;
+let musicWasPlaying = !BGM.paused;
 function playVideo() {
-    musicWasPlaying = !bgm.paused;
+    musicWasPlaying = !BGM.paused;
     if (musicWasPlaying) pauseMusic();
-    player.play();
+    PLAYER.play();
 }
 
 function pauseVideo() {
-    player.pause();
+    PLAYER.pause();
     if (musicWasPlaying) playMusic();
 }
 
 preload();
 loadNext();
 
-player.addEventListener('ended', () => {
+PLAYER.addEventListener('ended', () => {
     loadNext();
-    player.play();
+    PLAYER.play();
 });
 
-const observer = new IntersectionObserver(entries => {
+const OBSERVER = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             playVideo();
@@ -62,4 +62,4 @@ const observer = new IntersectionObserver(entries => {
     })
 });
 
-observer.observe(player);
+OBSERVER.observe(PLAYER);
