@@ -1,3 +1,5 @@
+import { pauseMusic, playMusic } from "./bgm.js";
+
 // loads random videos of che
 const NUM_FILES = 4;
 
@@ -23,13 +25,13 @@ function loadNext() {
 let musicWasPlaying = !bgm.paused;
 function playVideo() {
     musicWasPlaying = !bgm.paused;
-    if (musicWasPlaying) bgm.pause();
+    if (musicWasPlaying) pauseMusic();
     player.play();
 }
 
 function pauseVideo() {
     player.pause();
-    if (musicWasPlaying) bgm.play();
+    if (musicWasPlaying) playMusic();
 }
 
 loadNext();

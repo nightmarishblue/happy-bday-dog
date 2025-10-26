@@ -1,8 +1,6 @@
 /*
     loads and plays the background music for the web page
 */
-const BGM_FILE = "./music/ram-ranch.opus";
-
 /** @type {HTMLAudioElement} */
 const bgm = document.getElementById('bgm');
 const player = document.getElementById('now-playing');
@@ -35,3 +33,5 @@ function pauseMusic() {
 
 pauseMusic();
 addEventsListener(['mousedown', 'touchend'], playMusic);
+
+export {playMusic, pauseMusic};
