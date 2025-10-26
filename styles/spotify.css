@@ -24,6 +24,7 @@
   border-radius: 2px;
   margin: 0 2px;
   animation: equalizer 1.9s steps(20, end) infinite;
+  transition: height 0.1s;
 }
 
 .spotify .bar:nth-child(1) {
@@ -91,81 +92,81 @@
 
 @keyframes equalizer {
   0% {
-    height: 60%;
+    height: 10%;
   }
   4% {
-    height: 50%;
+    height: 40%;
   }
   8% {
-    height: 40%;
+    height: 60%;
   }
   12% {
-    height: 30%;
-  }
-  16% {
     height: 20%;
   }
+  16% {
+    height: 40%;
+  }
   20% {
-    height: 30%;
+    height: 70%;
   }
   24% {
-    height: 40%;
+    height: 30%;
   }
   28% {
     height: 10%;
   }
   32% {
-    height: 40%;
+    height: 30%;
   }
   36% {
-    height: 60%;
+    height: 50%;
   }
   40% {
-    height: 20%;
+    height: 60%;
   }
   44% {
-    height: 40%;
+    height: 70%;
   }
   48% {
-    height: 70%;
+    height: 80%;
   }
   52% {
-    height: 30%;
+    height: 70%;
   }
   56% {
-    height: 10%;
+    height: 60%;
   }
   60% {
-    height: 30%;
+    height: 50%;
   }
   64% {
-    height: 50%;
+    height: 60%;
   }
   68% {
-    height: 60%;
+    height: 70%;
   }
   72% {
-    height: 70%;
+    height: 80%;
   }
   76% {
-    height: 80%;
+    height: 60%;
   }
   80% {
-    height: 70%;
-  }
-  84% {
-    height: 60%;
-  }
-  88% {
     height: 50%;
   }
+  84% {
+    height: 40%;
+  }
+  88% {
+    height: 30%;
+  }
   92% {
-    height: 60%;
+    height: 20%;
   }
   96% {
-    height: 70%;
+    height: 30%;
   }
   100% {
-    height: 80%;
+    height: 40%;
   }
 }
