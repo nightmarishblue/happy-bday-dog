@@ -17,21 +17,30 @@ function addEventsListener(events, listener) {
     }
 }
 
-// show the player and start the music
-function playMusic() {
+function showMusic() {
     player.style.opacity = '';
     player.style.scale = '';
+}
+
+function hideMusic() {
+    player.style.opacity = 0;
+    player.style.scale = 0;
+}
+
+// show the player and start the music
+function playMusic() {
     bgm.play();
 }
 
 // hide and pause
 function pauseMusic() {
-    player.style.opacity = 0;
-    player.style.scale = 0;
     bgm.pause();
 }
 
-pauseMusic();
-addEventsListener(['mousedown', 'touchend'], playMusic);
+hideMusic();
+addEventsListener(['mousedown', 'touchend'], () => {
+    showMusic();
+    playMusic();
+});
 
 export {playMusic, pauseMusic};
