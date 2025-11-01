@@ -18,3 +18,15 @@ details[open] summary {
   border-bottom: 1px solid #aaaaaa;
   margin-bottom: 0.5em;
 }
+
+#video-container {
+  max-width: 500px; /* TODO: figure out what to set this to dynamically */
+  aspect-ratio: 16 / 9;
+}
+
+#el-comandante {
+  /* fill the entire container; use that to control size and forget about it */
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}

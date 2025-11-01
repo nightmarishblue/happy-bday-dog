@@ -60,6 +60,6 @@ const OBSERVER = new IntersectionObserver(entries => {
             pauseVideo();
         }
     })
-});
+}, { threshold: 0.5 });
 
 OBSERVER.observe(PLAYER);
