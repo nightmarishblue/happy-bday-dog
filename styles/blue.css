@@ -41,10 +41,10 @@
     grid-template-columns: auto auto;
     /* grid-auto-rows: minmax(100px, 300px); */
     gap: 0.5rem; /* better value for this? */
-  }
-
-  .grid * {
-    margin: auto;
+  
+    > * {
+      margin: auto;
+    }
   }
 
   .video-container {
