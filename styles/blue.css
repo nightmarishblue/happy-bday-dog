@@ -1,27 +1,44 @@
-details {
-  border: 1px solid #aaaaaa;
-  border-radius: 4px;
-  padding: 0.5em 0.5em 0;
-}
+#blues-clues {
+  details {
+    border: 1px solid #aaaaaa;
+    border-radius: 4px;
+    padding: 0.5em 0.5em 0;
+  }
 
-summary {
-  font-weight: bold;
-  margin: -0.5em -0.5em 0;
-  padding: 0.5em;
-}
+  summary {
+    font-weight: bold;
+    margin: -0.5em -0.5em 0;
+    padding: 0.5em;
+  }
 
-details[open] {
-  padding: 0.5em;
-}
+  details[open] {
+    padding: 0.5em;
+  }
 
-details[open] summary {
-  border-bottom: 1px solid #aaaaaa;
-  margin-bottom: 0.5em;
-}
+  details[open] summary {
+    border-bottom: 1px solid #aaaaaa;
+    margin-bottom: 0.5em;
+  }
 
-#video-container {
-  max-width: 500px; /* TODO: figure out what to set this to dynamically */
-  aspect-ratio: 16 / 9;
+  .cat-bg {
+    background-image: url("../images/blue/cat-bg.jpg");
+    background-size: 200px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    /* grid-auto-rows: minmax(100px, 300px); */
+    gap: 0.5rem; /* better value for this? */
+  }
+
+  .grid * {
+    margin: auto;
+  }
+
+  .video-container {
+    aspect-ratio: 16 / 9;
+  }
 }
 
 #el-comandante {
