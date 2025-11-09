@@ -44,24 +44,30 @@
     gap: 0.5rem; /* better value for this? */
   
     * {
-      /* max-height: 300px; */
+      max-height: 400px;
       margin: auto;
     }
 
     > * {
       grid-column: 1;
+      grid-auto-rows: auto;
     }
 
     .right {
       grid-column: 2;
-      grid-row: 1 / -1;
+      /* grid-row: 1 / -1; */
     }
   }
 
-  .shrine {
+  .figure {
     display: flex;
     flex-direction: column;
     height: 100%;
+
+    img, video {
+      width: 100%;
+      height: auto;
+    }
   }
 
   .video-container {
