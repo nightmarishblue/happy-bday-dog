@@ -3,7 +3,6 @@ const DELAY_INCREMENT = 0.1;
 for (const el of document.getElementsByClassName("floaty-text")) {
     /** @type {string} */
     const text = el.dataset.text;
-    console.log(text)
     el.innerHTML = text
         .split('')
         .map((char, i) => {
