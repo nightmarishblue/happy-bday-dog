@@ -62,6 +62,8 @@
     display: flex;
     gap: 0.5em;
 
+    align-items: stretch;
+
     > * {
       flex-direction: column;
     }
@@ -89,6 +91,28 @@
   .video-container {
     aspect-ratio: 16 / 9;
   }
+
+  .card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    font-size: x-large;
+
+    .cake {
+      aspect-ratio: 1 / 1;
+    }
+
+    /* span {
+      display: inline-block;
+    } */
+  }
+}
+
+.floaty-char {
+  display: inline-block;
+  animation: float 3s ease-in-out infinite;
 }
 
 #el-comandante {
@@ -122,5 +146,14 @@
 
   50% {
     background-position: 100% 0;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px)
   }
 }
