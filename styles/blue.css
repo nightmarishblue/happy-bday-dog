@@ -37,26 +37,6 @@
     }
   }
 
-  /* .grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 0.5rem;
-  
-    * {
-      max-height: 400px;
-      margin: auto;
-    }
-
-    > * {
-      grid-column: 1;
-      grid-auto-rows: auto;
-    }
-
-    .right {
-      grid-column: 2;
-    }
-  } */
-
   /* CSS grid is dog shit so i made my own*/
   .grid {
     display: flex;
@@ -94,7 +74,6 @@
 
   .card {
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     align-items: center;
 
@@ -104,9 +83,12 @@
       aspect-ratio: 1 / 1;
     }
 
-    /* span {
-      display: inline-block;
-    } */
+    span {
+      font-size: xx-large;
+      font-weight: bold;
+      color: rgb(53, 158, 218);
+      -webkit-text-stroke: rgb(26, 92, 167) 2px;
+    }
   }
 }
 
