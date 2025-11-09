@@ -8,13 +8,14 @@
     border: 1px solid #aaaaaa;
     border-radius: 4px;
     padding: 0.5em 0.5em 0;
+
+    background-color: white;
   }
 
   summary {
     margin: -0.5em -0.5em 0;
     padding: 0.5em;
 
-    font-size: 3em;
     font-weight: bold;
 
     cursor: pointer;
