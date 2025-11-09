@@ -33,6 +33,7 @@
 
       /* give text a white stroke so it's legible - might remove */
       -webkit-text-stroke: 1px whitesmoke;
+      paint-order: stroke fill;
     }
   }
 
@@ -78,5 +79,23 @@
   }
   to {
     background-position: var(--bg-size) var(--bg-size);
+  }
+}
+
+.rainbow {
+  background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+  background-clip: text;
+  color: transparent;
+  animation: rainbow-scroll 4s ease-in-out infinite;
+  background-size: 400% 100%;
+}
+
+@keyframes rainbow-scroll {
+  0%, 100% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 100% 0;
   }
 }
