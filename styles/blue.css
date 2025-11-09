@@ -53,12 +53,15 @@
     }
 
     .right {
-      display: flex;
-      flex-direction: column;
       grid-column: 2;
       grid-row: 1 / -1;
-      height: 100%;
     }
+  }
+
+  .shrine {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
 
   .video-container {
