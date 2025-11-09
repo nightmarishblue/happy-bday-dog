@@ -38,12 +38,25 @@
 
   .grid {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 2fr 1fr;
     /* grid-auto-rows: minmax(100px, 300px); */
     gap: 0.5rem; /* better value for this? */
   
-    > * {
+    * {
+      /* max-height: 300px; */
       margin: auto;
+    }
+
+    > * {
+      grid-column: 1;
+    }
+
+    .right {
+      display: flex;
+      flex-direction: column;
+      grid-column: 2;
+      grid-row: 1 / -1;
+      height: 100%;
     }
   }
 
