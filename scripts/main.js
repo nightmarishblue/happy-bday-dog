@@ -1,5 +1,7 @@
 import './bgm.js';
 import './el-comandante.js';
 import './oneko.js';
-import './floaty-text.js'
+import './floaty-text.js';
 import './confetti.js';
+import './bmw-bong.js';
+
