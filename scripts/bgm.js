@@ -6,14 +6,15 @@ const BGM = document.getElementById('bgm');
 const PLAYER = document.getElementById('now-playing');
 
 function addEventsListener(events, listener) {
+    const subject = document.body;
     const func = (event) => {
         listener(event);
         for (const event of events) {
-            window.removeEventListener(event, func);
+            subject.removeEventListener(event, func);
         }
     };
     for (const event of events) {
-        window.addEventListener(event, func);
+        subject.addEventListener(event, func);
     }
 }
 
